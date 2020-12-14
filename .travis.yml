@@ -3,14 +3,39 @@ python:
   - "3.5"
 env:
   matrix:
-    - TOXENV=py27
-    - TOXENV=py32
-    - TOXENV=py33
-    - TOXENV=py34
-    - TOXENV=py35
-    - TOXENV=pypy
-    - TOXENV=pypy3
-    - TOXENV=flake8
+   - TOXENV=py27
+     arch: amd64
+   - TOXENV=py27
+     arch: ppc64le
+   - TOXENV=py32
+     arch: amd64
+   - TOXENV=py32
+     arch: ppc64le
+   - TOXENV=py33
+     arch: amd64
+   - TOXENV=py33
+     arch: ppc64le
+   - TOXENV=py34
+     arch: amd64
+   - TOXENV=py34
+     arch: ppc64le
+   - TOXENV=py35
+     arch: amd64
+   - TOXENV=py35
+     arch: ppc64le
+   - TOXENV=pypy
+     arch: amd64
+   - TOXENV=pypy
+     arch: ppc64le
+   - TOXENV=pypy3
+     arch: amd64
+   - TOXENV=pypy3
+     arch: ppc64le
+   - TOXENV=flake8
+     arch: amd64
+   - TOXENV=flake8
+     arch: ppc64le
+     
 install:
   - travis_retry pip install tox
 script:
